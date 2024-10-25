@@ -264,7 +264,6 @@ h2 {
 
 
 /* Estilos Responsivos */
-/* Estilos Responsivos */
 @media (max-width: 768px) {
     /* Ajusta o nav para coluna e centra os itens */
     nav ul {
@@ -323,14 +322,6 @@ h2 {
         height: 80px;
     }
 
-    /* Ajusta o botão finalizar compra */
-    #finalizar-compra {
-        width: 100%; /* Botão ocupa 100% da largura */
-    }
-
-    .order-summary {
-        width: 100%; /* O resumo da compra ocupa 100% da largura */
-    }
 
     /* Ajusta os formulários */
     form {
@@ -352,6 +343,8 @@ h2 {
         font-size: 0.9em; /* Reduz o tamanho da fonte para caber melhor */
     }
 }
+
+
 
 
 

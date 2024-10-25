@@ -65,3 +65,9 @@ document.getElementById('finalizar-compra').addEventListener('click', function()
         window.location.href = "checkout.html";  // Redirecionar para a página de checkout
     }
 });
+
+function toggleMenu() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('active'); // Alterna a classe 'active' para mostrar ou esconder o menu
+}
+

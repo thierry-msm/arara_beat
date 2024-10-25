@@ -45,7 +45,7 @@ body {
 .product-cart h3 {
     flex: 1;
     font-size: 1.2em;
-    color: #333;
+    color: #313131;
     margin-right: 20px;
 }
 
@@ -105,6 +105,54 @@ body {
 .remove-item:hover {
     background-color: #c0392b;
 }
+
+/* Resumo do Pedido */
+.order-summary {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+}
+
+.order-summary h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.order-summary p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#total-value {
+    font-weight: bold;
+    color: #0071e3;
+    font-size: 1.5em;
+}
+
+#finalizar-compra {
+    background-color: #0071e3;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1em;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#finalizar-compra:hover {
+    background-color: #005bb5;
+}
+
+
 /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
 
@@ -178,5 +226,97 @@ body {
         flex-direction: column;
         padding: 20px;
         width: 95%;
+    }
+}
+
+/* Estilos Globais */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Esconde o menu e alinha o botão menu hambúrguer */
+    nav ul {
+        display: none; /* Esconde o menu por padrão */
+        flex-direction: column; /* Torna os links em coluna para o menu móvel */
+        position: absolute;
+        top: 60px; /* Posiciona o menu logo abaixo do header */
+        right: 0;
+        width: 100%; /* Ocupa toda a largura da tela */
+        background-color: #333;
+        z-index: 1001;
+        text-align: center; /* Centraliza os itens do menu */
+    }
+
+    nav.active ul {
+        display: flex; /* Mostra o menu quando o nav tem a classe "active" */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Estilo do botão hambúrguer */
+    .menu-toggle {
+        display: block; /* O botão hambúrguer aparece apenas em telas menores */
+        font-size: 2em;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-toggle:focus {
+        outline: none; /* Remove outline quando o botão é focado */
+    }
+
+    /* Ajusta o layout do header para mobile */
+    header {
+        justify-content: space-between;
+        padding: 0.5em 1em;
+    }
+}
+
+/* Para desktops (telas maiores) */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Esconde o botão hambúrguer em telas maiores */
+    }
+
+    nav ul {
+        display: flex; /* O menu fica sempre visível em telas maiores */
+        position: static;
+        flex-direction: row;
     }
 }
