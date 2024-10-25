@@ -158,14 +158,6 @@ h2{
     border-radius: 10px;
 }
 
-
-
-
-
-
-
-
-
 main {
     flex: 1;
     padding: 20px;
@@ -272,22 +264,97 @@ h2 {
 
 
 /* Estilos Responsivos */
+/* Estilos Responsivos */
 @media (max-width: 768px) {
+    /* Ajusta o nav para coluna e centra os itens */
     nav ul {
         flex-direction: column;
         align-items: center;
+        padding: 0;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Espaçamento mais leve entre os itens do menu */
+    }
+
+    header {
+        flex-direction: column;
+        padding: 1em 0.5em;
+    }
+
+    /* Ajuste para o campo de busca em telas menores */
+    #search {
+        width: 90%; /* Expande o campo de busca para quase a largura total */
+        margin-top: 10px;
+    }
+
+    /* Ajusta a apresentação dos produtos */
+    .product-container {
+        flex-wrap: wrap; /* Permite que os produtos quebrem em linhas */
+        gap: 1.5em; /* Aumenta o espaçamento entre os produtos */
     }
 
     .product {
-        flex-direction: column;
+        width: 45%; /* Produtos ocupam 45% da tela em telas menores */
+        margin-bottom: 1em;
+    }
+
+    /* Se a tela for ainda menor, como em smartphones */
+    @media (max-width: 480px) {
+        .product {
+            width: 100%; /* Produtos ocupam toda a largura da tela */
+        }
+    }
+
+    /* Ajusta o resumo do carrinho e outros elementos para mobile */
+    #cart-list {
+        width: 100%; /* A lista de produtos ocupa 100% da tela em mobile */
+    }
+
+    .product {
+        flex-direction: column; /* Alinha os itens verticalmente em dispositivos móveis */
         align-items: flex-start;
     }
 
     .product img {
         margin-bottom: 10px;
+        width: 80px; /* Reduz o tamanho da imagem em dispositivos móveis */
+        height: 80px;
     }
 
-    #cart-list {
-        width: 100%;
+    /* Ajusta o botão finalizar compra */
+    #finalizar-compra {
+        width: 100%; /* Botão ocupa 100% da largura */
+    }
+
+    .order-summary {
+        width: 100%; /* O resumo da compra ocupa 100% da largura */
+    }
+
+    /* Ajusta os formulários */
+    form {
+        width: 100%; /* O formulário ocupa toda a largura da tela em mobile */
+    }
+
+    label, input {
+        width: 100%; /* Campos de formulário ocupam toda a largura */
+    }
+
+    input {
+        font-size: 1em;
+        padding: 0.8em;
+    }
+
+    /* Ajusta o rodapé para dispositivos móveis */
+    footer {
+        padding: 20px;
+        font-size: 0.9em; /* Reduz o tamanho da fonte para caber melhor */
     }
 }
+
+
+
+
+
+
